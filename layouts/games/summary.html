@@ -9,9 +9,9 @@
   </div>
   {{ end }}
   <div class="work-content">
+    {{ with .Params.summary }}<p class="work-blurb">{{ . }}</p>{{ end }}
     <h2 class="work-title">
       <a href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
     </h2>
-    {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
   </div>
 </div>
